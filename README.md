@@ -12,9 +12,9 @@
 
 首先我們需要安裝 nodemon
 
-'''
+```no-highlight
 npm i -g nodemon
-'''
+```
 
 確認安裝好後，執行 nodemon app.js
 
@@ -40,17 +40,17 @@ nodemon.json 為 nodemon 軟體的 config 檔，可視需求修改，一般而�
 
 ui_label.html內定義如下
 
-'''
+```no-highlight
 <span class="inline-flex">{{}}</span>
-'''
+```
 
 ui_label.html 的內容最外層的標籤一定要加上 class=""，
 
-'''
+```no-highlight
 即便沒有設置 class，也要撰寫 <xxx class=""></xxx>
-'''
+```
 
-# 而 {{}} 代表可以安插子元件，
+## 而 {{}} 代表可以安插子元件，
 
 ⭐️ 實際範例 1 
 
@@ -58,9 +58,9 @@ ui_label.html 的內容最外層的標籤一定要加上 class=""，
 
 設計稿 .cut 內可以這樣寫
 
-'''
+```no-highlight
 ui_label:<Based on TailwindCSS>
-'''
+```
 
 Based on TailwindCSS的文字會取代 {{}}
 
@@ -70,11 +70,11 @@ Based on TailwindCSS的文字會取代 {{}}
 
 設計稿 .cut 內可以這樣寫
 
-'''
+```no-highlight
 ui_div
     ui_label:<string1>
     ui_label:<string2>
-'''
+```
 
 則 ui_div 的 {{}} 會轉成 2 個 label 的內容
 
@@ -82,21 +82,21 @@ ui_div
 
 design.cut 的部分取下面片段解釋
 
-'''
+```no-highlight
 ui_label:<Based on TailwindCSS>{ ml-1 }
-'''
+```
 
-'''
+```no-highlight
 ui_label => 新增 label 元件
-'''
+```
 
-'''
+```no-highlight
 ui_label:<Based on TailwindCSS> => 新增 label 元件，文字內容為 Based on TailwindCSS
-'''
+```
 
-'''
+```no-highlight
 ui_label:<Based on TailwindCSS>{ ml-1 } => 新增 label 元件內容為 Based on TailwindCSS 並增加 tailwind 樣式
-'''
+```
 
 你也可以自己設計元件譬如 my_label，
 
