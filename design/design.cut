@@ -8,7 +8,7 @@ ui_div:{min-h-[calc(100dvh-23px)]}
             ui_button:<Features>
             ui_button:<Docs>
     ui_hr
-    ui_banner:{bg-[yellowgreen]}
+    ui_banner:{bg-[url(./assets/k.png)] text-white}
     ui_grid_2:{border-1 lg:grid-cols-2 sm:grid-cols-1 }
         ui_div:<col 1/2>{bg-[#CCC] h-[50px]}
         ui_div:<col 1/2>{bg-[#CCC] h-[50px]}
