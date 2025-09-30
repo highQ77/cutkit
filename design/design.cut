@@ -27,4 +27,5 @@ ui_div:{min-h-[calc(100dvh-23px)]}
         ui_div:<col 1/5>{bg-[#CCC] h-[50px]}
         ui_div:<col 1/5>{bg-[#CCC] h-[50px]}
         ui_div:<col 1/5>{bg-[#CCC] h-[50px]}
+    cut_dialog
 ui_footer:<design by William77>

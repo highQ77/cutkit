@@ -1,17 +1,40 @@
 const fs = require('fs');
 const path = require('path');
-const coms = fs.readdirSync('component')
 
-const objArray = {}
+const coms = fs.readdirSync('component')
+const componentObjs = {}
 coms.forEach(com => {
     let comName = com.split('.html')[0]
     let comContent = fs.readFileSync('component' + path.sep + com, { encoding: 'utf-8' })
-    objArray[comName] = comContent.replace(`class="`, `class="${comName} `)
+    componentObjs[comName] = comContent.replace(`class="`, `class="${comName} `)
 });
+
+const cuts = fs.readdirSync('compose')
+const composeObjs = {}
+cuts.forEach(cut => {
+    let cutName = cut.split('.cut')[0]
+    let cutContent = fs.readFileSync('compose' + path.sep + cut, { encoding: 'utf-8' })
+    composeObjs[cutName] = cutContent
+})
 
 fs.readdirSync('design').forEach(design_cut => {
 
     let page = fs.readFileSync(`design/${design_cut}`, { encoding: 'utf-8' })
+
+    Object.keys(composeObjs).forEach(key => {
+        let lenArray = []
+        page.trim().split('\n').forEach((p, idx) => {
+            if (p.indexOf(key) > -1) {
+                let len = p.replaceAll('    ', '@').split('').filter(i => i == '@').length;
+                lenArray.push(len)
+            }
+        })
+        lenArray.forEach(len => {
+            let compose = composeObjs[key].trim().split('\n').map((c, idx) => idx ? (Array(len).fill('    ').join('') + c) : c).join('\n')
+            page = page.replace(key, compose)
+        })
+    })
+
     let parsed = []
     page.trim().split('\n').forEach((p, idx) => {
         let len = p.replaceAll('    ', '@').split('').filter(i => i == '@').length;
@@ -61,7 +84,7 @@ fs.readdirSync('design').forEach(design_cut => {
 
         let output = ''
         for (let i = 0; i < tree.length; i++) {
-            let result = objArray[tree[i].node] + ''
+            let result = componentObjs[tree[i].node] + ''
             if (tree[i].css) {
                 let cls = result.match(/class=".+"/)
                 result = result.replace(cls, cls[0].slice(0, cls[0].length - 1) + ' ' + tree[i].css + '"')

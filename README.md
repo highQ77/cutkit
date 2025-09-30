@@ -26,6 +26,8 @@ npm i -g nodemon
 
 component 資料夾為切版師自定義的元件，為片段的 html 程式，可覆用
 
+compose 資料夾為切版師自定義的 .cut 元件，可建立高複雜度的元件
+
 design 資料夾存放 .cut 設計程式稿
 
 output 資料夾存放編譯後的成品，若設計稿為 my-page.cut，則輸出的完成稿為 my-page.html
