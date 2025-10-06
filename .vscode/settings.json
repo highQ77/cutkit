@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.cut": "handlebars"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "entity.name.tag",
+                "settings": {
+                    "foreground": "#99d26e",
+                    "fontStyle": "bold"
+                },
+            },
+        ]
+    }
+}
