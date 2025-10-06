@@ -1,0 +1,31 @@
+<div class="atom-layout-v bg-[#DDD] text-white h-[100dvh] flex flex-col">
+    <header class="atom-sect-header bg-[#EEE] text-black p-2 shadow-lg">
+        <nav class="atom-sect-nav flex flex-row justify-between items-center">
+            <div class="atom-layout-h items-end flex flex-row"><span class="atom-txt-title inline-flex text-[24px]">CutKit</span><span class="atom-txt-caption mx-1 inline-flex text-[12px]">v0.2</span><span class="atom-txt-body inline-flex text-[16px]">你的切版好夥伴</span></div>
+            <div class="atom-layout-h flex flex-row">
+                <div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">
+                    Home</div>
+                <div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">
+                    Doc</div>
+                <div class="atom-layout-v bg-black text-white flex flex-col">
+                    <div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">
+                        Demo</div>
+                </div>
+                <div class="atom-layout-v bg-black text-white flex flex-col">
+                    <div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">
+                        Samples</div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="atom-sect-main">
+        <div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5">
+            <div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col">
+                <div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-caption text-[green] mr-2 inline-flex text-[12px]">npm run cutkit
+                        &gt;</span><span class="atom-txt-caption inline-flex text-[12px]">轉換 sample.cut 為
+                        sample.html</span></div>
+            </div>
+        </div>
+    </main>
+    <footer class="atom-sect-footer text-center"><span class="atom-txt-caption text-black inline-flex text-[12px]">designed by William77</span></footer>
+</div>

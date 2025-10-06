@@ -1,0 +1,9 @@
+<pre class="text-[12px] p-2">👽 $自訂資料夾名<span class="hljs-tag">&lt;<span class="hljs-name">自訂元件名</span>&gt;</span>(插槽)@repeat=任意正整數
+
+$custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Demo)@repeat=3 <span class="hljs-comment">&lt;!-- compose 用以封裝結構，生成覆用元件，compose 僅支援 repeat 功能，class / style / event 不支援 --&gt;</span>
+
+👽 compose 元件內的組成可以是 atom 與 compose 元件混合構成如下：
+
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(compose 架構)@class={m-2 text-[#999]}
+    $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(My Button)</pre>

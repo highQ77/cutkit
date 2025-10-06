@@ -1,0 +1,16 @@
+cutkit                      <!--cutkit 專案-->
+    component               <!--元件模組-->
+        atom                <!--官方模組，請勿更動或刪除，可在 component 資料夾下建立自己的資料夾還有 html-->
+        code                <!--(資料夾內容可刪)針對高亮程式碼需求設計的元件，可將 .h5 檔轉成一般 .html 檔-->
+        ...                 <!--自己建立元件模組-->
+    compose                 <!--複合模組-->
+        custom              <!--(資料夾可刪)自己建立複合模組，即複合模組內可以是複合模組與 atom 的混合結構-->
+        ...                 <!--自己建立複合模組-->
+    event                   <!--官方模組，請勿更動或刪除，存放 prototype 所需的互動設計程式
+    node_modules            <!--與本專案相關的套件-->
+    ouput                   <!--page 資料夾下的 .cut 檔案轉換成 .html 並儲存在 output 資料夾-->
+    page                    <!--切版的開始點，請新增自己的 .cut 檔-->
+    cutkit.js               <!--.cut 檔核心程式解析器-->
+    nodemon.json            <!--nodemon config-->
+    output.html             <!--網頁輸出模板-->
+    package.json            <!--專案配置詳細資訊-->

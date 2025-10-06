@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutKit v0.2</title>
+    <link rel="stylesheet" type="text/css" href="./assets/highlightjs/a11y-dark.css" />
+    <script src="./assets/browser@4.js"></script>
+    <style type="text/tailwindcss">
+        @theme{
+            /* site color palette */
+            --color-primary: #FFCC00; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="atom-layout-v bg-[#DDD] text-white h-[100dvh] flex flex-col"><header class="atom-sect-header bg-[#EEE] text-black p-2 shadow-lg"><nav class="atom-sect-nav flex flex-row justify-between items-center"><div class="atom-layout-h items-end flex flex-row"><span class="atom-txt-title inline-flex text-[24px]">CutKit</span><span class="atom-txt-caption mx-1 inline-flex text-[12px]">v0.2</span><span class="atom-txt-body inline-flex text-[16px]">你的切版好夥伴</span></div><div class="atom-layout-h flex flex-row"><div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Home</div><div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Doc</div><div class="atom-layout-v custom-btn bg-black text-white flex flex-col"><div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Demo</div></div><div class="atom-layout-v custom-btn bg-black text-white flex flex-col"><div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Samples</div></div></div></nav></header><main class="atom-sect-main"><div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-headline inline-flex text-[48px]">page2</span></div></div></div></main><footer class="atom-sect-footer"></footer></div>
+</body>
+
+</html><script>// target is event "this", ex: <span onclick="show(this)">test</span>
+
+function hide(target, popupClassName) {
+    [...document.getElementsByClassName(popupClassName)].forEach(i => {
+        i.style.visibility = 'hidden'
+    })
+}
+
+function show(target, popupClassName) {
+    [...document.getElementsByClassName(popupClassName)].forEach(i => {
+        i.style.visibility = 'visible'
+    })
+}
+
+function gotoPage(target, url) {
+    location.href = url
+}
+
+// hide all popups
+[...document.body.getElementsByTagName('*')].filter(i => i.className.indexOf('~') > -1).forEach(i => i.style.visibility = 'hidden')</script>

@@ -1,0 +1,29 @@
+👽 atom : <!--資料夾名，同時作為 namespace 名稱空間，防止同名元件衝突(資料夾名是開發者暱稱也不錯)-->
+
+👽 atom-file-name : <!--元件檔名-->
+
+👽 所有 atom 元件
+atom<grid>(cols:3, gap:1) <!--自定義每個 row 有幾欄與間距-->
+atom<layout-h> <!--元件水平排列-->
+atom<layout-v> <!--元件垂直排列-->
+atom<sect-footer> <!--頁尾區塊-->
+atom<sect-header> <!--頁首區塊-->
+atom<sect-main> <!--正文區塊-->
+atom<sect-nav> <!--導覽區塊-->
+atom<txt-headline> <!--大標題 48px-->
+atom<txt-title> <!--標題 24px-->
+atom<txt-subtitle> <!--子標題 20px-->
+atom<txt-body> <!--內文 16px-->
+atom<btn>(按鈕) <!--自定義按鈕基礎 14px-->
+atom<txt-caption> <!--說明 12px-->
+atom<h> <!--水平分割線-->
+
+👽 (TextSlot) or (slot1:TextSlotA, slot2:TextSlotB) : <!-- 1 個或多個 slot, 可在元件內接值，atom<grid>(cols:3, gap:1)內部程式碼如下 -->
+<div class="grid grid-cols-{{cols}} gap-{{gap}}">{{{{}}}}</div>
+
+👽 @class={bg-black text-white}|style={height:100px; width:100px}|repeat=3|event={onclick:show(~alert)} 後綴屬性
+目前規劃有 class style repeat，後續會增加其他功能
+class <!-- 就是 html 標籤 class 屬性 -->
+style <!-- 就是 html 標籤 style 屬性 -->
+repeat <!-- 就是元件重複個數，適合製作假資料列表 -->
+event <!-- 綁定事件用於 prototype 互動程式部分，下方將有 event 解釋 -->

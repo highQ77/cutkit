@@ -1,0 +1,9 @@
+👽 $自訂資料夾名<自訂元件名>(插槽)@repeat=任意正整數
+
+$custom<btn>(Demo)@repeat=3 <!-- compose 用以封裝結構，生成覆用元件，compose 僅支援 repeat 功能，class / style / event 不支援 -->
+
+👽 compose 元件內的組成可以是 atom 與 compose 元件混合構成如下：
+
+atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+    atom<txt-caption>(compose 架構)@class={m-2 text-[#999]}
+    $custom<btn>(My Button)

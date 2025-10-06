@@ -1,0 +1,104 @@
+atom<layout-v>@class={bg-[#DDD] text-white h-[100dvh]}
+    atom<sect-header>@class={bg-[#EEE] text-black p-2 shadow-lg}
+        atom<sect-nav>
+            atom<layout-h>@class={items-end}
+                atom<txt-title>(CutKit)@style={font-family:impact}
+                atom<txt-caption>(v0.2)@class={mx-1}
+                atom<txt-body>(你的切版好夥伴)
+            atom<layout-h>
+                atom<btn>(Home)@class={hover:bg-[#DDD]}
+                atom<btn>(Doc)@class={hover:bg-[#DDD]}
+                $custom<btn>(Demo)
+                $custom<btn>(Samples)
+    atom<sect-main>
+        // 🟢 why
+        atom<grid>(cols:1, gap:5)@class={bg-[#333] p-5 text-[#BBB] bg-[url(assets/k.png)]}
+            atom<txt-title>(歡迎使用 CutKit 開源免費切版工具)@class={text-white}
+            code<why-cutkit>
+        // 🟢 why install
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 pb-0 text-black}
+            atom<layout-v>@class={bg-[#666] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#CCC]}
+                    atom<txt-subtitle>(安裝)
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(安裝指令)@class={m-2 text-[#999]}
+                code<why-install>
+        // 🟢 why structure
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 pb-0 text-black}
+            atom<layout-v>@class={bg-[#666] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#CCC]}
+                    atom<txt-subtitle>(目錄結構)
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(目錄介紹)@class={m-2 text-[#999]}
+                code<why-structure>
+        // 🟢 why flow
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 pb-0 text-black}
+            atom<layout-v>@class={bg-[#666] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#CCC]}
+                    atom<txt-subtitle>(開發流程)
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(流程介紹)@class={m-2 text-[#999]}
+                code<why-flow>
+        // 🟢 sample code
+        atom<h>
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 pb-0 text-black}
+            atom<layout-v>@class={bg-[#666] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#CCC]}
+                    atom<txt-subtitle>(快速功能展示)
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<layout-v>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#333] p-5}
+                    atom<txt-caption>(npm run cutkit >)@class={text-[green] mr-2}
+                    atom<txt-caption>(轉換 sample.cut 為 sample.html)
+        atom<grid>(cols:2, gap:5)@class={bg-[#BBB] p-5 pt-0}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(page / sample.cut)@class={m-2 text-[#999]}
+                code<demo-code>
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(output / sample.html)@class={m-2 text-[#999]}
+                code<demo-converted>
+        // 🟢 atom intro
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<layout-v>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#333] p-5}
+                    atom<txt-caption>(最小單位 atom 元件)
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5 pt-0}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(component / atom / *.html 為官方提供的設計請勿異動，若需要自定義元件請新增資料夾，譬如 component / {your namespace} / *.html)@class={m-2 text-[#999]}
+                code<demo-atom>
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(atom 架構)@class={m-2 text-[#999]}
+                code<demo-atom-intro>
+        // 🟢 compose design
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<layout-v>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#333] p-5}
+                    atom<txt-caption>(設計覆用的 compose 元件很簡單，以 $custom< btn>(slot) 為例)
+        atom<grid>(cols:2, gap:5)@class={bg-[#BBB] p-5 pt-0}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(output / sample.cut 部分程式碼，$ 表示 compose 元件，$custom<btn>(Samples) 如右欄)@class={m-2 text-[#999]}
+                code<demo-module>
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(compose / custom / btn.cut，{{}} 表示文字 slot，此範例將帶入 Demo & Samples 取代 {{}})@class={m-2 text-[#999]}
+                code<demo-module-btn>
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5 pt-0}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(compose 架構)@class={m-2 text-[#999]}
+                code<demo-compose-intro>
+        // 🟢 event for prototype
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<layout-v>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#333] p-5}
+                    atom<txt-caption>(簡單的程式互動用於原型設計 - 開關彈出畫面與跳轉網頁)
+        atom<grid>(cols:1, gap:5)@class={bg-[#BBB] p-5 pt-0}
+            atom<layout-v>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+                atom<txt-caption>(event 介紹)@class={m-2 text-[#999]}
+                code<demo-event-intro>
+            atom<layout-h>
+                atom<btn>(Alert)@class={bg-[#333] hover:bg-[#555] mr-1}|event={onclick:show(~alert)}
+                atom<btn>(GotoPage2)@class={bg-[#333] hover:bg-[#555]}|event={onclick:gotoPage(page2.html)}
+    atom<sect-footer>
+$custom<alert>

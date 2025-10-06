@@ -1,0 +1,20 @@
+<pre class="text-[12px] p-2">個人認為合理的專案開發流程
+
+<span class="hljs-comment">&lt;!-- 下面 5 個步驟為一個小的專案功能流程，一個專案有多個流程，譬如流程可為使用者註冊登入流程、發送電子報流程等等，循環 5 個步驟一步一步解決各個流程直至完成所有流程 --&gt;</span>
+
+1. 繪製 wireframe 草稿圖 <span class="hljs-tag">&lt;<span class="hljs-name">draw.io</span>&gt;</span>，畫面由線條與框框組成，其用意是規劃出畫面的陳設與功能，不在意畫面是否美觀，但是功能都需要確認、UI位置配置正確
+2. 完成 wireframe 後，開始製作 mockup，通常是 UIUX / 網頁設計師的工作，將視覺介面繪製出來 <span class="hljs-tag">&lt;<span class="hljs-name">figma</span>&gt;</span>
+3. 當 mockup 畫面確立沒問題，下一個階段即切版，<span class="hljs-tag">&lt;<span class="hljs-name">歡迎使用</span> <span class="hljs-attr">CutKit</span>&gt;</span> 進行切版設計
+4. 切版完成後，開始製作 prototype，這邊的 prototype 是指 show / hide popup 與跳轉頁面的簡單互動機制
+5. 測試、優化與調整
+
+
+<span class="hljs-comment">&lt;!-- CutKit 操作步驟 --&gt;</span>
+
+1. page 資料夾內建立自己的 xxx.cut
+2. xxx.cut 透過 component/xxx 與 compose/xxx 組成 xxx.cut 畫面
+3. 加入 event 機制完成 prototype 製作
+4. 確認沒問題交付整個專案給前端工程師
+5. 前端工程師依照專案 component / compose / page 裡的元件刻製 react 或 vue 版本的元件 
+
+(若自動生成 react 或 vue 元件或許可以省下大家很多時間，未來筆者或許會規劃)</pre>

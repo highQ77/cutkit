@@ -1,3 +1,7 @@
 {
-    "ext": "js,cut"
+    "ext": "js,cut,html,h5",
+    "ignore": [
+        "output/**/*",
+        "component/code/*.html"
+    ]
 }

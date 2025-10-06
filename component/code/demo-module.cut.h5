@@ -1,0 +1,7 @@
+...
+atom<layout-h>
+    atom<btn>(Home)@class={hover:bg-[#DDD]}
+    atom<btn>(Doc)@class={hover:bg-[#DDD]}
+    $custom<btn>(Demo)
+    $custom<btn>(Samples) <!--請看這行-->
+...

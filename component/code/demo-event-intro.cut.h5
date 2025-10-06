@@ -1,0 +1,19 @@
+👽 atom<btn>(點我跳出彈窗)@event={onclick:show(~alert)}  <!-- show 為開啟 ~alert 視窗 -->
+
+onclick 為綁定事件名，支援所有 onXXXX 事件，譬如 onmouseenter / onmouseeleave
+
+👽 若是設計一個 dialog 如下，記得加上 ~alert
+
+atom<layout-v>@class={~alert fixed w-[100dvw] h-[100dvh] left-0 top-0 justify-center items-center bg-[#00000099]} <!-- 加上 ~alert -->
+    atom<layout-v>@class={w-[320px] bg-[#CCC] border-1 rounded-lg overflow-hidden}
+        atom<layout-v>@class={justify-center items-center h-[34px]}
+            atom<txt-body>(Alert)
+        atom<layout-v>@class={justify-center items-center bg-[#EEE] min-h-[100px]}
+            atom<txt-body>(Hi, are you ok?)
+        atom<layout-h>@class={justify-end items-center bg-[#EEE] p-1}
+            atom<btn>(cancel)@class={min-w-[65px] h-[34px] rounded-sm mr-1 shadow-lg bg-[#DDD] hover:bg-[#CCC]}
+            atom<btn>(ok)@class={min-w-[65px] h-[34px] rounded-sm shadow-lg bg-[#DDD] hover:bg-[#CCC]}|event={onclick:hide(~alert)}  <!-- 同理可以用 hide 關閉 ~alert 視窗 -->
+
+👽 目前事件共有 3 個，分別是前述提到的 show / hide，還有一個是頁面跳轉 gotoPage，用法如下
+
+atom<btn>(點我跳轉畫面)@event={onclick:gotoPage(page2.html)} 

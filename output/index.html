@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutKit v0.2</title>
+    <link rel="stylesheet" type="text/css" href="./assets/highlightjs/a11y-dark.css" />
+    <script src="./assets/browser@4.js"></script>
+    <style type="text/tailwindcss">
+        @theme{
+            /* site color palette */
+            --color-primary: #FFCC00; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="atom-layout-v bg-[#DDD] text-white h-[100dvh] flex flex-col"><header class="atom-sect-header bg-[#EEE] text-black p-2 shadow-lg"><nav class="atom-sect-nav flex flex-row justify-between items-center"><div class="atom-layout-h items-end flex flex-row"><span class="atom-txt-title inline-flex text-[24px]" style="font-family:impact">CutKit</span><span class="atom-txt-caption mx-1 inline-flex text-[12px]">v0.2</span><span class="atom-txt-body inline-flex text-[16px]">你的切版好夥伴</span></div><div class="atom-layout-h flex flex-row"><div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Home</div><div class="atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Doc</div><div class="atom-layout-v custom-btn bg-black text-white flex flex-col"><div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Demo</div></div><div class="atom-layout-v custom-btn bg-black text-white flex flex-col"><div class="atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">Samples</div></div></div></nav></header><main class="atom-sect-main"><div class="atom-grid bg-[#333] p-5 text-[#BBB] bg-[url(assets/k.png)] grid grid-cols-1 gap-5"><span class="atom-txt-title text-white inline-flex text-[24px]">歡迎使用 CutKit 開源免費切版工具</span><pre class="code-why-cutkit text-[12px] p-2">一直以來切版的職責歸屬是模凌兩可的，而跟切版工作最關聯的職位是網頁設計師與網站前端工程師，
+在實際工作中切版的工作會被踢提皮球；而為了讓切版開發更為有趣，筆者開發 CutKit 切版輔助工具，
+讓視覺介面開發簡單且提高生產力。
+
+若是你學會了 CutKit，你的開發速度將會大幅提升。筆者建議 CutKit 選配 TailwindCSS，
+在 RWD 處理較為輕鬆 --- 本專案以 TailwindCSS 為基底開發。
+
+&gt; <span class="hljs-tag">&lt;<span class="hljs-name">切版不是一份討喜的工作原因可能為</span>&gt;</span>：
++ 對視覺設計師而言只想設計圖案而不想碰程式
++ 初學者想上手 CSS 但需要記得的 CSS 屬性指令太多，不知如何開始
++ CSS 學習 cp 值不高，只能用在網頁介面的開發上
++ CSS selector 規則太多太複雜，有時選不到相應的物件
++ 有時設定的 CSS 指令總是無法達到想要的效果
++ SCSS / SASS / LESS 等太多預處理器有選擇障礙
++ HTML 遇到重複的結構但不同的資料在切版時要大量複製貼上，然後找修改的資料時眼睛都看花了
++ 常態性 CSS 視覺的調整頻率，例如客戶要求的調整
+
+&gt; <span class="hljs-tag">&lt;<span class="hljs-name">CutKit</span> <span class="hljs-attr">解決了什麼問題</span>&gt;</span>？
++ 提高切版創作動力，讓你愛上切版
++ 建立覆用元件模組讓開發更流暢，無需大量 copy / paste / modify 程式碼
++ 元件模組可以分享給不同的切版師
++ 配合 TailwindCSS 搭建介面，亦可依照個人需求選擇不同 CSS 框架，譬如 Bootstrap
++ 模組錯誤程式片段修正只要一個地方，若是大量使用此模組修改不費心
++ wireframe ( 線框圖 ) 完成後進行 mockup ( 視覺切版搞 )，如果夠厲害可直接邊想邊切版生成
++ 製作切好版的 wireframe 加上一些互動流程機制即為 prototype ( mockup + 簡單互動程式 ex: 開關對話框 / 跳轉頁面 ) 
+
+&gt; <span class="hljs-tag">&lt;<span class="hljs-name">本網站提供什麼內容</span>&gt;</span>？
++ 安裝
++ 專案目錄結構介紹
++ 快速功能展示
++ 開發流程
++ 🚧 筆者 CSS 開發思維、心法與常用 CSS 類介紹
++ 🚧 常用元件分享
+
+<span class="hljs-comment">&lt;!-- 針對以上文字內容有任何問題請直接告訴我喔，🚧 表示施工中 --&gt;</span></pre></div><div class="atom-grid bg-[#BBB] p-5 pb-0 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#666] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#CCC] flex flex-row"><span class="atom-txt-subtitle inline-flex text-[20px]">安裝</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">安裝指令</span><pre class="code-why-install text-[12px] p-2">git clone xxx/cutkit.git    <span class="hljs-comment">&lt;!--下載專案--&gt;</span>
+
+cd cutkit                   <span class="hljs-comment">&lt;!--進到 cutkit 專案資料夾--&gt;</span>
+
+npm i                       <span class="hljs-comment">&lt;!--下載相依套件--&gt;</span>
+
+npm i nodemon -g            <span class="hljs-comment">&lt;!--安裝 file watcher--&gt;</span>
+
+npm run cutkit              <span class="hljs-comment">&lt;!--執行專案--&gt;</span>
+
+最後請搭配 vscode live server plugin &gt; 開啟 http://localhost:5500/output/index.html</pre></div></div><div class="atom-grid bg-[#BBB] p-5 pb-0 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#666] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#CCC] flex flex-row"><span class="atom-txt-subtitle inline-flex text-[20px]">目錄結構</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">目錄介紹</span><pre class="code-why-structure text-[12px] p-2">cutkit                      <span class="hljs-comment">&lt;!--cutkit 專案--&gt;</span>
+    component               <span class="hljs-comment">&lt;!--元件模組--&gt;</span>
+        atom                <span class="hljs-comment">&lt;!--官方模組，請勿更動或刪除，可在 component 資料夾下建立自己的資料夾還有 html--&gt;</span>
+        code                <span class="hljs-comment">&lt;!--(資料夾內容可刪)針對高亮程式碼需求設計的元件，可將 .h5 檔轉成一般 .html 檔--&gt;</span>
+        ...                 <span class="hljs-comment">&lt;!--自己建立元件模組--&gt;</span>
+    compose                 <span class="hljs-comment">&lt;!--複合模組--&gt;</span>
+        custom              <span class="hljs-comment">&lt;!--(資料夾可刪)自己建立複合模組，即複合模組內可以是複合模組與 atom 的混合結構--&gt;</span>
+        ...                 <span class="hljs-comment">&lt;!--自己建立複合模組--&gt;</span>
+    event                   <span class="hljs-comment">&lt;!--官方模組，請勿更動或刪除，存放 prototype 所需的互動設計程式
+    node_modules            &lt;!--與本專案相關的套件--&gt;</span>
+    ouput                   <span class="hljs-comment">&lt;!--page 資料夾下的 .cut 檔案轉換成 .html 並儲存在 output 資料夾--&gt;</span>
+    page                    <span class="hljs-comment">&lt;!--切版的開始點，請新增自己的 .cut 檔--&gt;</span>
+    cutkit.js               <span class="hljs-comment">&lt;!--.cut 檔核心程式解析器--&gt;</span>
+    nodemon.json            <span class="hljs-comment">&lt;!--nodemon config--&gt;</span>
+    output.html             <span class="hljs-comment">&lt;!--網頁輸出模板--&gt;</span>
+    package.json            <span class="hljs-comment">&lt;!--專案配置詳細資訊--&gt;</span></pre></div></div><div class="atom-grid bg-[#BBB] p-5 pb-0 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#666] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#CCC] flex flex-row"><span class="atom-txt-subtitle inline-flex text-[20px]">開發流程</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">流程介紹</span><pre class="code-why-flow text-[12px] p-2">個人認為合理的專案開發流程
+
+<span class="hljs-comment">&lt;!-- 下面 5 個步驟為一個小的專案功能流程，一個專案有多個流程，譬如流程可為使用者註冊登入流程、發送電子報流程等等，循環 5 個步驟一步一步解決各個流程直至完成所有流程 --&gt;</span>
+
+1. 繪製 wireframe 草稿圖 <span class="hljs-tag">&lt;<span class="hljs-name">draw.io</span>&gt;</span>，畫面由線條與框框組成，其用意是規劃出畫面的陳設與功能，不在意畫面是否美觀，但是功能都需要確認、UI位置配置正確
+2. 完成 wireframe 後，開始製作 mockup，通常是 UIUX / 網頁設計師的工作，將視覺介面繪製出來 <span class="hljs-tag">&lt;<span class="hljs-name">figma</span>&gt;</span>
+3. 當 mockup 畫面確立沒問題，下一個階段即切版，<span class="hljs-tag">&lt;<span class="hljs-name">歡迎使用</span> <span class="hljs-attr">CutKit</span>&gt;</span> 進行切版設計
+4. 切版完成後，開始製作 prototype，這邊的 prototype 是指 show / hide popup 與跳轉頁面的簡單互動機制
+5. 測試、優化與調整
+
+
+<span class="hljs-comment">&lt;!-- CutKit 操作步驟 --&gt;</span>
+
+1. page 資料夾內建立自己的 xxx.cut
+2. xxx.cut 透過 component/xxx 與 compose/xxx 組成 xxx.cut 畫面
+3. 加入 event 機制完成 prototype 製作
+4. 確認沒問題交付整個專案給前端工程師
+5. 前端工程師依照專案 component / compose / page 裡的元件刻製 react 或 vue 版本的元件 
+
+(若自動生成 react 或 vue 元件或許可以省下大家很多時間，未來筆者或許會規劃)</pre></div></div><div class="atom-h border-b-1"></div><div class="atom-grid bg-[#BBB] p-5 pb-0 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#666] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#CCC] flex flex-row"><span class="atom-txt-subtitle inline-flex text-[20px]">快速功能展示</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-caption text-[green] mr-2 inline-flex text-[12px]">npm run cutkit ></span><span class="atom-txt-caption inline-flex text-[12px]">轉換 sample.cut 為 sample.html</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 pt-0 grid grid-cols-2 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">page / sample.cut</span><pre class="code-demo-code text-[12px] p-2">atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={bg-[#DDD] text-white h-[100dvh]}
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-header</span>&gt;</span>@class={bg-[#EEE] text-black p-2 shadow-lg}
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-nav</span>&gt;</span>
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span>@class={items-end}
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-title</span>&gt;</span>(CutKit)
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(v0.2)@class={mx-1}
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-body</span>&gt;</span>(你的切版好夥伴)
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span>
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Home)@class={hover:bg-[#DDD]}
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Doc)@class={hover:bg-[#DDD]}
+                $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Demo)
+                $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Samples)
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-main</span>&gt;</span>
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">grid</span>&gt;</span>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span>@class={justify-center text-[#333] p-5}
+                    atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(npm run cutkit &gt;)@class={text-[green] mr-2}
+                    atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(轉換 sample.cut 為 sample.html)
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-footer</span>&gt;</span>@class={text-center}
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(cutkit is designed by William77)@class={text-black}</pre></div><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">output / sample.html</span><pre class="code-demo-converted text-[12px] p-2"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-v bg-[#DDD] text-white h-[100dvh] flex flex-col&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-sect-header bg-[#EEE] text-black p-2 shadow-lg&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-sect-nav flex flex-row justify-between items-center&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-h items-end flex flex-row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-title inline-flex text-[24px]&quot;</span>&gt;</span>CutKit<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-caption mx-1 inline-flex text-[12px]&quot;</span>&gt;</span>v0.2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-body inline-flex text-[16px]&quot;</span>&gt;</span>你的切版好夥伴<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-h flex flex-row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]&quot;</span>&gt;</span>
+                    Home<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-btn hover:bg-[#DDD] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]&quot;</span>&gt;</span>
+                    Doc<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-v bg-black text-white flex flex-col&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]&quot;</span>&gt;</span>
+                        Demo<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-v bg-black text-white flex flex-col&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-btn hover:bg-[#333] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]&quot;</span>&gt;</span>
+                        Samples<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-sect-main&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-layout-h justify-center text-[#333] p-5 flex flex-row&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-caption text-[green] mr-2 inline-flex text-[12px]&quot;</span>&gt;</span>npm run cutkit
+                        <span class="hljs-symbol">&amp;gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-caption inline-flex text-[12px]&quot;</span>&gt;</span>轉換 sample.cut 為
+                        sample.html<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-sect-footer text-center&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;atom-txt-caption text-black inline-flex text-[12px]&quot;</span>&gt;</span>designed by William77<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre></div></div><div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-caption inline-flex text-[12px]">最小單位 atom 元件</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 pt-0 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">component / atom / *.html 為官方提供的設計請勿異動，若需要自定義元件請新增資料夾，譬如 component / {your namespace} / *.html</span><pre class="code-demo-atom text-[12px] p-2">👽 自訂資料夾名<span class="hljs-tag">&lt;<span class="hljs-name">自訂元件名</span>&gt;</span>(插槽)@class={css類別}|style={css樣式}|repeat=任意正整數|event={標籤事件屬性名:show(自定義css名稱)} <span class="hljs-comment">&lt;!--自定義css名稱前方需要有 ~ 波浪符號--&gt;</span>
+
+atom<span class="hljs-tag">&lt;<span class="hljs-name">atom-file-name</span>&gt;</span>(slot1:AAA,slot2:BBB)@class={bg-black text-white}|style={height:100px; width:100px}|repeat=3|event={onclick:show(~alert)}</pre></div><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">atom 架構</span><pre class="code-demo-atom-intro text-[12px] p-2">👽 atom : <span class="hljs-comment">&lt;!--資料夾名，同時作為 namespace 名稱空間，防止同名元件衝突(資料夾名是開發者暱稱也不錯)--&gt;</span>
+
+👽 atom-file-name : <span class="hljs-comment">&lt;!--元件檔名--&gt;</span>
+
+👽 所有 atom 元件
+atom<span class="hljs-tag">&lt;<span class="hljs-name">grid</span>&gt;</span>(cols:3, gap:1) <span class="hljs-comment">&lt;!--自定義每個 row 有幾欄與間距--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span> <span class="hljs-comment">&lt;!--元件水平排列--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span> <span class="hljs-comment">&lt;!--元件垂直排列--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-footer</span>&gt;</span> <span class="hljs-comment">&lt;!--頁尾區塊--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-header</span>&gt;</span> <span class="hljs-comment">&lt;!--頁首區塊--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-main</span>&gt;</span> <span class="hljs-comment">&lt;!--正文區塊--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">sect-nav</span>&gt;</span> <span class="hljs-comment">&lt;!--導覽區塊--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-headline</span>&gt;</span> <span class="hljs-comment">&lt;!--大標題 48px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-title</span>&gt;</span> <span class="hljs-comment">&lt;!--標題 24px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-subtitle</span>&gt;</span> <span class="hljs-comment">&lt;!--子標題 20px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-body</span>&gt;</span> <span class="hljs-comment">&lt;!--內文 16px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(按鈕) <span class="hljs-comment">&lt;!--自定義按鈕基礎 14px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span> <span class="hljs-comment">&lt;!--說明 12px--&gt;</span>
+atom<span class="hljs-tag">&lt;<span class="hljs-name">h</span>&gt;</span> <span class="hljs-comment">&lt;!--水平分割線--&gt;</span>
+
+👽 (TextSlot) or (slot1:TextSlotA, slot2:TextSlotB) : <span class="hljs-comment">&lt;!-- 1 個或多個 slot, 可在元件內接值，atom&lt;grid&gt;(cols:3, gap:1)內部程式碼如下 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;grid grid-cols-{{cols}} gap-{{gap}}&quot;</span>&gt;</span>{{}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+👽 @class={bg-black text-white}|style={height:100px; width:100px}|repeat=3|event={onclick:show(~alert)} 後綴屬性
+目前規劃有 class style repeat，後續會增加其他功能
+class <span class="hljs-comment">&lt;!-- 就是 html 標籤 class 屬性 --&gt;</span>
+style <span class="hljs-comment">&lt;!-- 就是 html 標籤 style 屬性 --&gt;</span>
+repeat <span class="hljs-comment">&lt;!-- 就是元件重複個數，適合製作假資料列表 --&gt;</span>
+event <span class="hljs-comment">&lt;!-- 綁定事件用於 prototype 互動程式部分，下方將有 event 解釋 --&gt;</span></pre></div></div><div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-caption inline-flex text-[12px]">設計覆用的 compose 元件很簡單，以 $custom< btn>(slot) 為例</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 pt-0 grid grid-cols-2 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">output / sample.cut 部分程式碼，$ 表示 compose 元件，$custom<btn>(Samples) 如右欄</span><pre class="code-demo-module text-[12px] p-2">...
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span>
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Home)@class={hover:bg-[#DDD]}
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Doc)@class={hover:bg-[#DDD]}
+    $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Demo)
+    $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Samples) <span class="hljs-comment">&lt;!--請看這行--&gt;</span>
+...</pre></div><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">compose / custom / btn.cut，{{}} 表示文字 slot，此範例將帶入 Demo & Samples 取代 {{}}</span><pre class="code-demo-module-btn text-[12px] p-2">atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={bg-black text-white}
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>({{}})@class={hover:bg-[#333]}</pre></div></div><div class="atom-grid bg-[#BBB] p-5 pt-0 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">compose 架構</span><pre class="code-demo-compose-intro text-[12px] p-2">👽 $自訂資料夾名<span class="hljs-tag">&lt;<span class="hljs-name">自訂元件名</span>&gt;</span>(插槽)@repeat=任意正整數
+
+$custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(Demo)@repeat=3 <span class="hljs-comment">&lt;!-- compose 用以封裝結構，生成覆用元件，compose 僅支援 repeat 功能，class / style / event 不支援 --&gt;</span>
+
+👽 compose 元件內的組成可以是 atom 與 compose 元件混合構成如下：
+
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={bg-[#333] rounded-lg shadow-lg overflow-scroll}
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-caption</span>&gt;</span>(compose 架構)@class={m-2 text-[#999]}
+    $custom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(My Button)</pre></div></div><div class="atom-grid bg-[#BBB] p-5 text-black grid grid-cols-3 gap-5"><div class="atom-layout-v bg-[#CCC] rounded-lg shadow-lg flex flex-col"><div class="atom-layout-h justify-center text-[#333] p-5 flex flex-row"><span class="atom-txt-caption inline-flex text-[12px]">簡單的程式互動用於原型設計 - 開關彈出畫面與跳轉網頁</span></div></div></div><div class="atom-grid bg-[#BBB] p-5 pt-0 grid grid-cols-1 gap-5"><div class="atom-layout-v bg-[#333] rounded-lg shadow-lg overflow-scroll flex flex-col"><span class="atom-txt-caption m-2 text-[#999] inline-flex text-[12px]">event 介紹</span><pre class="code-demo-event-intro text-[12px] p-2">👽 atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(點我跳出彈窗)@event={onclick:show(~alert)}  <span class="hljs-comment">&lt;!-- show 為開啟 ~alert 視窗 --&gt;</span>
+
+onclick 為綁定事件名，支援所有 onXXXX 事件，譬如 onmouseenter / onmouseeleave
+
+👽 若是設計一個 dialog 如下，記得加上 ~alert
+
+atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={~alert fixed w-[100dvw] h-[100dvh] left-0 top-0 justify-center items-center bg-[#00000099]} <span class="hljs-comment">&lt;!-- 加上 ~alert --&gt;</span>
+    atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={w-[320px] bg-[#CCC] border-1 rounded-lg overflow-hidden}
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={justify-center items-center h-[34px]}
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-body</span>&gt;</span>(Alert)
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-v</span>&gt;</span>@class={justify-center items-center bg-[#EEE] min-h-[100px]}
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">txt-body</span>&gt;</span>(Hi, are you ok?)
+        atom<span class="hljs-tag">&lt;<span class="hljs-name">layout-h</span>&gt;</span>@class={justify-end items-center bg-[#EEE] p-1}
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(cancel)@class={min-w-[65px] h-[34px] rounded-sm mr-1 shadow-lg bg-[#DDD] hover:bg-[#CCC]}
+            atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(ok)@class={min-w-[65px] h-[34px] rounded-sm shadow-lg bg-[#DDD] hover:bg-[#CCC]}|event={onclick:hide(~alert)}  <span class="hljs-comment">&lt;!-- 同理可以用 hide 關閉 ~alert 視窗 --&gt;</span>
+
+👽 目前事件共有 3 個，分別是前述提到的 show / hide，還有一個是頁面跳轉 gotoPage，用法如下
+
+atom<span class="hljs-tag">&lt;<span class="hljs-name">btn</span>&gt;</span>(點我跳轉畫面)@event={onclick:gotoPage(page2.html)} </pre></div><div class="atom-layout-h flex flex-row"><div class="atom-btn bg-[#333] hover:bg-[#555] mr-1 inline-flex justify-center items-center p-2 cursor-pointer text-[14px]" onclick="show(this,'~alert')">Alert</div><div class="atom-btn bg-[#333] hover:bg-[#555] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]" onclick="gotoPage(this,'page2.html')">GotoPage2</div></div></div></main><footer class="atom-sect-footer"></footer></div><div class="atom-layout-v custom-alert ~alert fixed w-[100dvw] h-[100dvh] left-0 top-0 justify-center items-center bg-[#00000099] flex flex-col"><div class="atom-layout-v w-[320px] bg-[#CCC] border-1 rounded-lg overflow-hidden flex flex-col"><div class="atom-layout-v justify-center items-center h-[34px] flex flex-col"><span class="atom-txt-body inline-flex text-[16px]">Alert</span></div><div class="atom-layout-v justify-center items-center bg-[#EEE] min-h-[100px] flex flex-col"><span class="atom-txt-body inline-flex text-[16px]">Hi, are you ok?</span></div><div class="atom-layout-h justify-end items-center bg-[#EEE] p-1 flex flex-row"><div class="atom-btn min-w-[65px] h-[34px] rounded-sm mr-1 shadow-lg bg-[#DDD] hover:bg-[#CCC] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]">cancel</div><div class="atom-btn min-w-[65px] h-[34px] rounded-sm shadow-lg bg-[#DDD] hover:bg-[#CCC] inline-flex justify-center items-center p-2 cursor-pointer text-[14px]" onclick="hide(this,'~alert')">ok</div></div></div></div>
+</body>
+
+</html><script>// target is event "this", ex: <span onclick="show(this)">test</span>
+
+function hide(target, popupClassName) {
+    [...document.getElementsByClassName(popupClassName)].forEach(i => {
+        i.style.visibility = 'hidden'
+    })
+}
+
+function show(target, popupClassName) {
+    [...document.getElementsByClassName(popupClassName)].forEach(i => {
+        i.style.visibility = 'visible'
+    })
+}
+
+function gotoPage(target, url) {
+    location.href = url
+}
+
+// hide all popups
+[...document.body.getElementsByTagName('*')].filter(i => i.className.indexOf('~') > -1).forEach(i => i.style.visibility = 'hidden')</script>

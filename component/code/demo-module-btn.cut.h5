@@ -1,0 +1,2 @@
+atom<layout-v>@class={bg-black text-white}
+    atom<btn>({{{{}}}})@class={hover:bg-[#333]}

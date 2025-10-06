@@ -1,0 +1,9 @@
+atom<layout-v>@class={~alert fixed w-[100dvw] h-[100dvh] left-0 top-0 justify-center items-center bg-[#00000099]}
+    atom<layout-v>@class={w-[320px] bg-[#CCC] border-1 rounded-lg overflow-hidden}
+        atom<layout-v>@class={justify-center items-center h-[34px]}
+            atom<txt-body>(Alert)
+        atom<layout-v>@class={justify-center items-center bg-[#EEE] min-h-[100px]}
+            atom<txt-body>(Hi, are you ok?)
+        atom<layout-h>@class={justify-end items-center bg-[#EEE] p-1}
+            atom<btn>(cancel)@class={min-w-[65px] h-[34px] rounded-sm mr-1 shadow-lg bg-[#DDD] hover:bg-[#CCC]}
+            atom<btn>(ok)@class={min-w-[65px] h-[34px] rounded-sm shadow-lg bg-[#DDD] hover:bg-[#CCC]}|event={onclick:hide(~alert)}

@@ -1,0 +1,19 @@
+atom<layout-v>@class={bg-[#DDD] text-white h-[100dvh]}
+    atom<sect-header>@class={bg-[#EEE] text-black p-2 shadow-lg}
+        atom<sect-nav>
+            atom<layout-h>@class={items-end}
+                atom<txt-title>(CutKit)
+                atom<txt-caption>(v0.2)@class={mx-1}
+                atom<txt-body>(你的切版好夥伴)
+            atom<layout-h>
+                atom<btn>(Home)@class={hover:bg-[#DDD]}
+                atom<btn>(Doc)@class={hover:bg-[#DDD]}
+                $custom<btn>(Demo)
+                $custom<btn>(Samples)
+    atom<sect-main>
+        // 🟢 sample code
+        atom<grid>(cols:3, gap:5)@class={bg-[#BBB] p-5 text-black}
+            atom<layout-v>@class={bg-[#CCC] rounded-lg shadow-lg}
+                atom<layout-h>@class={justify-center text-[#333] p-5}
+                    atom<txt-headline>(page2)
+    atom<sect-footer>
